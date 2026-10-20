@@ -295,6 +295,51 @@
 
             document.getElementById('calc-result').classList.remove('hidden');
         }
+        
     </script>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "royfitph.firebaseapp.com",
+    projectId: "royfitph",
+    storageBucket: "royfitph.firebasestorage.app",
+    messagingSenderId: "726475396770",
+    appId: "1:726475396770:web:141f61c71da830432fa9fb"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const coachingForm = document.getElementById('coaching-form');
+
+  if (coachingForm) {
+    coachingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name-input').value;
+      const email = document.getElementById('email-input').value;
+      const goal = document.getElementById('goal-input').value;
+
+      try {
+        await addDoc(collection(db, "clients"), {
+          name: name,
+          email: email,
+          goal: goal,
+          createdAt: new Date()
+        });
+
+        alert("Salamat! Natanggap na ang iyong application.");
+        coachingForm.reset();
+      } catch (error) {
+        console.error("Error saving data: ", error);
+        alert("May naganap na error. Paki-subukan ulit.");
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
