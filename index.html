@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyFitPH | Online Fitness Coaching & Hypertrophy Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#1e293b',
+                        carddark: '#334155',
+                        cardhover: '#475569'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkbg text-gray-100 font-sans antialiased min-h-screen flex flex-col justify-between relative bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(to bottom, rgba(10, 10, 12, 0.9), rgba(10, 10, 12, 0.95)), url('background.jpeg.jpeg');"></body>
+
+    <!-- Navbar -->
+    <header class="w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <img src="logo.jpeg" alt="RoyFitPH Logo" class="w-20 h-20 rounded-xl object-cover">
+
+
+            <span class="font-semibold text-lg tracking-tight">RoyFitPH <span class="text-blue-500 text-xs px-2 py-0.5 bg-blue-500/10 rounded-full border border-blue-500/20">Hypertrophy Coach</span></span>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm text-gray-400 font-medium">
+            <a href="#hero" class="text-white transition-colors">Home</a>
+            <a href="#calculator" class="hover:text-white transition-colors">Macro Calculator</a>
+            <a href="#services" class="hover:text-white transition-colors">Coaching Programs</a>
+            <a href="#about" class="hover:text-white transition-colors">About Me</a>
+        </nav>
+
+        <div>
+            <button onclick="openModal()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all shadow-lg shadow-blue-600/25 cursor-pointer">
+                Apply for Coaching
+            </button>
+        </div>
+    </header>
+
+    <main id="hero" class="w-full max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+    
+    <!-- Left Side: Text Content -->
+    <div class="md:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            SCIENCE-BASED MUSCLE BUILDING & LEAN BULKING
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Transform Your Physique <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                with Custom Hypertrophy Coaching.
+            </span>
+        </h1>
+        
+        <p class="text-gray-400 text-sm md:text-base max-w-xl">
+            Hi, I'm <strong class="text-white">Roy Christian</strong> — Online fitness coach and personal trainer. No guesswork, no crash diets. Customized workout splits, flexible macro tracking, and sustainable fitness routines built for real results.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#coaching" class="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/30 transition duration-200 text-sm">
+                Start Your Transformation
+            </a>
+            <a href="#calculator" class="px-6 py-3.5 bg-gray-800/80 hover:bg-gray-800 text-gray-200 font-semibold rounded-xl border border-gray-700 transition duration-200 text-sm">
+                Calculate Macros &gt;
+            </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-gray-800/80 max-w-md">
+            <div>
+                <h4 class="text-xl font-bold text-white">100%</h4>
+                <p class="text-xs text-gray-400">Customized Plans</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold text-white">24/7</h4>
+                <p class="text-xs text-gray-400">Coach Support</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold text-white">Results</h4>
+                <p class="text-xs text-gray-400">Driven Protocols</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side: Exact Top Alignment with "Transform Your Physique" -->
+    <div class="md:col-span-5 flex justify-center md:justify-end items-start pt-2">
+        <div class="relative w-full max-w-md h-[420px] rounded-3xl overflow-hidden shadow-2xl">
+            <img src="coachroy.jpg" alt="Coach Roy" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 ease-out">
+        </div>
+    </div>
+
+</main>
+    <!-- Interactive Macro Calculator Section -->
+    <section id="calculator" class="w-full max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/60">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold tracking-tight">Free TDEE & Macro Calculator</h2>
+            <p class="text-gray-400 text-sm mt-2">Alamin ang iyong Daily Calories at Macronutrient breakdown para sa iyong fitness goal.</p>
+        </div>
+
+        <div class="bg-carddark border border-gray-800 p-8 rounded-3xl max-w-2xl mx-auto shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Timbang (kg)</label>
+                    <input type="number" id="weight" placeholder="Hal. 70" class="w-full bg-darkbg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-600 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Taas (cm)</label>
+                    <input type="number" id="height" placeholder="Hal. 175" class="w-full bg-darkbg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-600 transition-colors">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Edad</label>
+                    <input type="number" id="age" placeholder="Hal. 22" class="w-full bg-darkbg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-600 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">Goal</label>
+                    <select id="goal" class="w-full bg-darkbg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-600 transition-colors">
+                        <option value="bulk">Lean Bulk (+Surplus)</option>
+                        <option value="cut">Fat Loss (-Deficit)</option>
+                        <option value="recomp">Body Recomp (Maintenance)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="calculateMacros()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/20 cursor-pointer">
+                I-compute ang Aking Macros
+            </button>
+
+            <!-- Results Box -->
+            <div id="calc-result" class="hidden mt-8 p-6 bg-darkbg border border-blue-500/30 rounded-2xl text-center space-y-4">
+                <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Tinatayang Daily Target</h3>
+                <div class="text-3xl font-extrabold text-blue-400" id="calories-output">0 kcal</div>
+                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-800">
+                    <div>
+                        <p class="text-xs text-gray-500">Protein</p>
+                        <p class="text-lg font-bold text-white" id="protein-output">0g</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Carbs</p>
+                        <p class="text-lg font-bold text-white" id="carbs-output">0g</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">Fats</p>
+                        <p class="text-lg font-bold text-white" id="fats-output">0g</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaching Programs / Services -->
+    <section id="services" class="w-full max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/60">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold tracking-tight">Coaching Programs</h2>
+            <p class="text-gray-400 text-sm mt-2">Piliin ang programang akma sa iyong layunin sa pagpapaganda ng katawan.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Plan 1 -->
+            <div class="bg-carddark border border-gray-800 hover:border-blue-500/50 p-8 rounded-3xl transition-all flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-full">Most Popular</span>
+                    <h3 class="text-2xl font-bold mt-4">1-on-1 Online Coaching</h3>
+                    <p class="text-gray-400 text-sm mt-2">Kumpletong gabay sa bawat linggo para sa pinakamabilis at pinakaligtas na resulta.</p>
+                    <ul class="mt-6 space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center gap-2">✓ Customized Workout Program</li>
+                        <li class="flex items-center gap-2">✓ Tailored Nutrition & Macro Plan</li>
+                        <li class="flex items-center gap-2">✓ Weekly Check-ins & Video Feedback</li>
+                        <li class="flex items-center gap-2">✓ 24/7 Chat Support via Messenger/Telegram</li>
+                    </ul>
+                </div>
+                <button onclick="openModal()" class="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition-all cursor-pointer">
+                    Mag-apply Na
+                </button>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="bg-carddark border border-gray-800 hover:border-purple-500/50 p-8 rounded-3xl transition-all flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider bg-purple-500/10 px-3 py-1 rounded-full">Self-Paced</span>
+                    <h3 class="text-2xl font-bold mt-4">Custom Workout Split</h3>
+                    <p class="text-gray-400 text-sm mt-2">Isang besesang gawa ng programang nakatutok sa iyong gustong i-grow na muscle groups.</p>
+                    <ul class="mt-6 space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center gap-2">✓ 8-Week Hypertrophy Split</li>
+                        <li class="flex items-center gap-2">✓ Exercise Video Demonstrations</li>
+                        <li class="flex items-center gap-2">✓ Progressive Overload Tracker Guide</li>
+                        <li class="flex items-center gap-2">✓ Lifetime Access to Plan</li>
+                    </ul>
+                </div>
+                <button onclick="openModal()" class="mt-8 w-full bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 rounded-xl transition-all cursor-pointer">
+                    Kunin ang Split
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-7xl mx-auto px-6 py-8 border-t border-gray-800/60 text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; 2026 RoyFitPH. All rights reserved.</p>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-gray-300 transition-colors">Facebook</a>
+            <a href="#" class="hover:text-gray-300 transition-colors">Instagram</a>
+            <a href="#" class="hover:text-gray-300 transition-colors">TikTok</a>
+             <a href="#" class="hover:text-gray-300 transition-colors">Viber</a>
+              <a href="#" class="hover:text-gray-300 transition-colors">TikTok</a>
+               <a href="#" class="hover:text-gray-300 transition-colors">Email</a>
+        </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Modal / Popup for Application -->
+    <div id="coachingModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center px-4 z-50">
+        <div class="bg-carddark border border-gray-800 p-8 rounded-3xl max-w-md w-full relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold mb-2">Client Application</h3>
+            <p class="text-xs text-gray-400 mb-6">Punan ang detalye sa ibaba at mag-message tayo para sa iyong coaching onboarding.</p>
+            
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Buong Pangalan</label>
+                    <input type="text" required class="w-full bg-darkbg border border-gray-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Email o Messenger Link</label>
+                    <input type="text" required class="w-full bg-darkbg border border-gray-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Pangunahing Layunin</label>
+                    <select class="w-full bg-darkbg border border-gray-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-600">
+                        <option>Magpalaki ng Muscle (Hypertrophy / Bulk)</option>
+                        <option>Magpapayat / Lean Cut</option>
+                        <option>Pagpapaganda ng Postura at Lakas</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition-all shadow-lg shadow-blue-600/25 mt-2 cursor-pointer">
+                    Ipadala ang Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script>
+        function openModal() {
+            document.getElementById('coachingModal').classList.remove('hidden');
+            document.getElementById('coachingModal').classList.add('flex');
+        }
+        function closeModal() {
+            document.getElementById('coachingModal').classList.remove('flex');
+            document.getElementById('coachingModal').classList.add('hidden');
+        }
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Maraming salamat! Natanggap na ni Coach Roy ang iyong application. Makikipag-ugnayan agad sa iyo.');
+            closeModal();
+        }
+        function calculateMacros() {
+            const w = parseFloat(document.getElementById('weight').value);
+            const h = parseFloat(document.getElementById('height').value);
+            const age = parseFloat(document.getElementById('age').value);
+            const goal = document.getElementById('goal').value;
+
+            if(!w || !h || !age) {
+                alert('Paki-fill out ang lahat ng fields nang tama.');
+                return;
+            }
+
+            // Basic BMR estimation (Mifflin-St Jeor formula for men approx)
+            let bmr = (10 * w) + (6.25 * h) - (5 * age) + 5;
+            let tdee = bmr * 1.375; // Lightly active baseline
+
+            if(goal === 'bulk') tdee += 300;
+            if(goal === 'cut') tdee -= 400;
+
+            let protein = Math.round(w * 2.0); // 2g per kg
+            let fats = Math.round((tdee * 0.25) / 9);
+            let carbs = Math.round((tdee - (protein * 4) - (fats * 9)) / 4);
+
+            document.getElementById('calories-output').innerText = Math.round(tdee) + ' kcal';
+            document.getElementById('protein-output').innerText = protein + 'g';
+            document.getElementById('carbs-output').innerText = carbs + 'g';
+            document.getElementById('fats-output').innerText = fats + 'g';
+
+            document.getElementById('calc-result').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
