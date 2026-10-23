@@ -244,9 +244,9 @@
                         <option>Pagpapaganda ng Postura at Lakas</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition-all shadow-lg shadow-blue-600/25 mt-2 cursor-pointer">
-                    Ipadala ang Application
-                </button>
+                <a href="https://forms.gle/YOUR_ACTUAL_LINK" target="_blank" class="block text-center w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl">
+                   Ipadala ang Application
+                </a>
             </form>
         </div>
     </div>
@@ -263,9 +263,10 @@
         }
         function handleFormSubmit(event) {
             event.preventDefault();
-            alert('Maraming salamat! Natanggap na ni Coach Roy ang iyong application. Makikipag-ugnayan agad sa iyo.');
+            window.open("https://forms.gle/YOUR_ACTUAL_LINK", "_blank");
             closeModal();
         }
+        
         function calculateMacros() {
             const w = parseFloat(document.getElementById('weight').value);
             const h = parseFloat(document.getElementById('height').value);
