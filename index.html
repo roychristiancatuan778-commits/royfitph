@@ -158,57 +158,116 @@
             </div>
         </div>
     </section>
-    <section id="transformations" class="py-16 px-4 max-w-6xl mx-auto">
-  <div class="text-center mb-12">
-    <h2 class="text-3xl font-bold text-white mb-2">Client Transformations</h2>
-    <p class="text-gray-400">Tingnan ang tunay na resulta ng aking mga na-coach sa custom hypertrophy at nutrition protocols.</p>
+ <section id="transformations" class="py-16 px-4 max-w-4xl mx-auto">
+  <div class="text-center mb-10">
+    <span class="bg-blue-900/40 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-700/50 uppercase tracking-widest">Real Results</span>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-3 mb-2 tracking-tight">Client Transformations</h2>
+    <p class="text-gray-400 text-sm md:text-base">Tingnan ang tunay na resulta ng aking mga na-coach sa custom hypertrophy at nutrition protocols.</p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Client Card 1 -->
-    <div class="bg-gray-800 border border-gray-700 rounded-2xl p-5 hover:border-blue-500 transition duration-300">
-      <div class="relative overflow-hidden rounded-xl mb-4 bg-gray-900 aspect-square flex items-center justify-center">
-        <!-- Palitan ang src ng totoong larawan kung mayroon na -->
-        <img src="sir kher.jpg" alt="Client Transformation 1" class="w-full h-full object-cover">
+  <!-- Carousel Outer Container -->
+  <div class="relative overflow-hidden rounded-3xl bg-gray-900/80 border border-gray-800 p-6 md:p-10 shadow-2xl">
+    
+    <!-- Slides Container -->
+    <div id="transformation-slider" class="relative w-full min-h-[460px] md:min-h-[500px]">
+      
+      <!-- Slide 1 (Sir Kher) -->
+      <div class="slide-item absolute inset-0 transition-all duration-700 opacity-100 ease-in-out flex flex-col md:flex-row items-center justify-center gap-8">
+        <!-- Overlapping Before & After Card Layout -->
+        <div class="relative w-full max-w-sm aspect-[4/5] flex items-center justify-center">
+          <!-- Main Image (After / Transformation) -->
+          <div class="w-[85%] h-[90%] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 relative ml-auto">
+            <img src="sir kher.jpg" alt="After Photo" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-red-600 text-white font-black text-xs px-3 py-1.5 rounded-lg shadow-lg tracking-wider">AFTER</span>
+          </div>
+          <!-- Overlapping Secondary Image (Before / Initial) -->
+          <div class="absolute left-0 bottom-2 w-[48%] h-[60%] rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-900 z-10">
+            <!-- Pwede mong palitan ang src nito ng 'sir kher before.jpg' kung may Before photo siya -->
+            <img src="sir kher.jpg" alt="Before Photo" class="w-full h-full object-cover grayscale brightness-90">
+            <span class="absolute bottom-2 left-2 bg-black/80 backdrop-blur-md text-white font-bold text-[10px] px-2.5 py-1 rounded-md border border-gray-700">BEFORE</span>
+          </div>
+        </div>
+        <!-- Quote / Details -->
+        <div class="text-center md:text-left max-w-md space-y-3">
+          <span class="bg-blue-900/50 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-800 inline-block">12 Weeks Protocol</span>
+          <h3 class="text-2xl font-bold text-white">Lean Bulking & Recomp</h3>
+          <p class="text-gray-300 italic text-sm md:text-base leading-relaxed">"Nakapagbawas ng body fat habang nakapagdagdag ng malinis na muscle mass nang walang crash diet!"</p>
+          <div class="text-blue-400 text-xs font-bold pt-2">— Sir Kher (Verified Client)</div>
+        </div>
       </div>
-      <div class="space-y-2">
-        <span class="bg-blue-900/50 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-800">12 Weeks Transformation</span>
-        <h3 class="text-xl font-bold text-white mt-2">Lean Bulking Protocol</h3>
-        <p class="text-gray-400 text-sm">"Nakapagbawas ng body fat habang nakapagdagdag ng malinis na muscle mass nang walang crash diet!"</p>
-        <div class="text-xs text-blue-400 font-semibold pt-2">— Verified Client</div>
+
+      <!-- Slide 2 -->
+      <div class="slide-item absolute inset-0 transition-all duration-700 opacity-0 pointer-events-none ease-in-out flex flex-col md:flex-row items-center justify-center gap-8">
+        <div class="relative w-full max-w-sm aspect-[4/5] flex items-center justify-center">
+          <div class="w-[85%] h-[90%] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 relative ml-auto bg-gray-800">
+            <img src="https://via.placeholder.com/400x500/1e293b/ffffff?text=AFTER+2" alt="After Photo 2" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-red-600 text-white font-black text-xs px-3 py-1.5 rounded-lg shadow-lg tracking-wider">AFTER</span>
+          </div>
+          <div class="absolute left-0 bottom-2 w-[48%] h-[60%] rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-900 z-10 bg-gray-900">
+            <img src="https://via.placeholder.com/300x400/0f172a/ffffff?text=BEFORE+2" alt="Before Photo 2" class="w-full h-full object-cover">
+            <span class="absolute bottom-2 left-2 bg-black/80 backdrop-blur-md text-white font-bold text-[10px] px-2.5 py-1 rounded-md border border-gray-700">BEFORE</span>
+          </div>
+        </div>
+        <div class="text-center md:text-left max-w-md space-y-3">
+          <span class="bg-blue-900/50 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-800 inline-block">16 Weeks Protocol</span>
+          <h3 class="text-2xl font-bold text-white">Strength & Muscle Gain</h3>
+          <p class="text-gray-300 italic text-sm md:text-base leading-relaxed">"Tumaas ang lakas sa compound lifts at mas nagkaroon ng kumpiyansa sa katawan."</p>
+          <div class="text-blue-400 text-xs font-bold pt-2">— Verified Client</div>
+        </div>
       </div>
+
     </div>
 
-    <!-- Client Card 2 -->
-    <div class="bg-gray-800 border border-gray-700 rounded-2xl p-5 hover:border-blue-500 transition duration-300">
-      <div class="relative overflow-hidden rounded-xl mb-4 bg-gray-900 aspect-square flex items-center justify-center">
-        <!-- Palitan ang src ng totoong larawan kung mayroon na -->
-        <img src="sir macoy.jpg" alt="Client Transformation 2" class="w-full h-full object-cover">
-      </div>
-      <div class="space-y-2">
-        <span class="bg-blue-900/50 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-800">16 Weeks Protocol</span>
-        <h3 class="text-xl font-bold text-white mt-2">Recomposition & Strength</h3>
-        <p class="text-gray-400 text-sm">"Tumaas ang lakas sa compound lifts at mas nagkaroon ng kumpiyansa sa katawan."</p>
-        <div class="text-xs text-blue-400 font-semibold pt-2">— Verified Client</div>
-      </div>
+    <!-- Navigation Dots -->
+    <div class="flex justify-center gap-2 mt-6 relative z-20">
+      <button onclick="setSlide(0)" class="dot-btn w-3 h-3 rounded-full bg-blue-500 transition-all duration-300"></button>
+      <button onclick="setSlide(1)" class="dot-btn w-3 h-3 rounded-full bg-gray-600 transition-all duration-300"></button>
     </div>
 
-    <!-- Client Card 3 -->
-    <div class="bg-gray-800 border border-gray-700 rounded-2xl p-5 hover:border-blue-500 transition duration-300">
-      <div class="relative overflow-hidden rounded-xl mb-4 bg-gray-900 aspect-square flex items-center justify-center">
-        <!-- Palitan ang src ng totoong larawan kung mayroon na -->
-        <img src="https://via.placeholder.com/400x400/1e293b/ffffff?text=Before+%26+After+3" alt="Client Transformation 3" class="w-full h-full object-cover">
-      </div>
-      <div class="space-y-2">
-        <span class="bg-blue-900/50 text-blue-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-blue-800">8 Weeks Protocol</span>
-        <h3 class="text-xl font-bold text-white mt-2">Fat Loss & Muscle Retention</h3>
-        <p class="text-gray-400 text-sm">"Napakadaling sundin ng workout split at macro tracking plan ni Coach Roy!"</p>
-        <div class="text-xs text-blue-400 font-semibold pt-2">— Verified Client</div>
-      </div>
-    </div>
   </div>
 </section>
 
+<!-- Automatic Slide Script -->
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide-item');
+  const dots = document.querySelectorAll('.dot-btn');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.remove('opacity-0', 'pointer-events-none');
+        slide.classList.add('opacity-100');
+      } else {
+        slide.classList.remove('opacity-100');
+        slide.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.classList.remove('bg-gray-600');
+        dot.classList.add('bg-blue-500', 'w-6');
+      } else {
+        dot.classList.remove('bg-blue-500', 'w-6');
+        dot.classList.add('bg-gray-600');
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function setSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+  }
+
+  // Lilipat nang kusa bawat 4 seconds (4000ms)
+  setInterval(nextSlide, 4000);
+</script>
     <!-- Coaching Programs / Services -->
     <section id="services" class="w-full max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/60">
         <div class="text-center max-w-2xl mx-auto mb-12">
